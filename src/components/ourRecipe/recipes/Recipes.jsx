@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Recipe from "../recipe/Recipe";
 
-const Recipes = () => {
+const Recipes = ({handleWantCook}) => {
 
     const[recipes, setRecipes] = useState([]);
     useEffect( () => {
@@ -11,10 +11,18 @@ const Recipes = () => {
         .then(data => setRecipes(data))
     } ,[])
 
+    // const [wantCook, setWantCook] = useState([]);
+
+    // const handleWantCook = (recipe) => {
+    //     const newWantCook = [...wantCook, recipe];
+    //     setWantCook(newWantCook);
+    // }
+
     return (
         <div className="grid grid-cols-2 gap-3">
             {
-                recipes.map((recipe, idx) => <Recipe key={idx} recipe={recipe}></Recipe>)
+                recipes.map((recipe, idx) => <Recipe key={idx} recipe={recipe}
+                handleWantCook ={handleWantCook}></Recipe>)
             }
         </div>
     );

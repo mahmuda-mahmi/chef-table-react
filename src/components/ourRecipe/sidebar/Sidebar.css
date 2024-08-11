@@ -1,0 +1,11 @@
+th{
+    background: #ffffff;
+}
+
+tr:nth-child(even){
+    background: #e6e6e6;
+}
+
+td{
+    padding-top: 10px;
+}

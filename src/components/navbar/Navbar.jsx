@@ -26,7 +26,7 @@ const Navbar = () => {
     <a className="text-2xl font-bold">React Meal</a>
             </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 *:text-lg">
+    <ul className="menu menu-horizontal px-1 *:text-lg *:font-semibold text-gray-700">
       <li><a>Home</a></li>
       <li><a>Recipes</a></li>
       <li><a>About</a></li>
@@ -36,7 +36,7 @@ const Navbar = () => {
   <div className="navbar-end">
   <div className="flex gap-2">
     <div className="form-control">
-      <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto rounded-full" />
+      <input type="text" placeholder="Search" className="input input-bordered w-20 focus:outline-none focus:border-success md:w-auto rounded-full" />
     </div>
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
